@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game">
+    <img  src="https://dthezntil550i.cloudfront.net/86/latest/861911302007288750002221253/1280_960/6d5f31fb-62f2-4c12-bbda-e22d08b4ea2a.png" alt="" >
+</div>
+</body>
+<script>
+class blackCat {
+    image
+    top
+    left
+    size
+    speed
+    constructor(image, top, left, size, speed) {
+        this.image = image
+        this.top = top
+        this.left = left
+        this.size = size
+        this.speed = speed
+
+    }
+    getBlackCat() {
+        return '<img width="' + this.size + '"' +
+            ' height="' + this.size + '"' +
+            ' src="' + this.image + '"' +
+            ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+    }
+    getMoveRight() {
+        return this.left += this.speed
+    }
+    getMoveDow() {
+        return this.top += this.speed
+    }
+    getMoveLeft() {
+        return this.left -= this.speed
+    }
+    getMoveUp() {
+        return this.top -= this.speed
+    }
+}
+
+let speed1 = +prompt("Nhập tốc độ")
+let BlackCat = new  blackCat("https://dthezntil550i.cloudfront.net/86/latest/861911302007288750002221253/1280_960/6d5f31fb-62f2-4c12-bbda-e22d08b4ea2a.png",0, 0,100,speed1 );
+function start() {
+    if (BlackCat.left < (window.innerWidth) - BlackCat.size && BlackCat.top === 0) {
+        BlackCat.getMoveRight();
+    }else if(BlackCat.top < (Window.innerHeight )- BlackCat.size && BlackCat.left > 0 ) {
+        BlackCat.getMoveDow()
+    }else if(BlackCat.left > 0) {
+        BlackCat.getMoveLeft()
+    }else if(BlackCat.top > 0) {
+        BlackCat.getMoveUp()
+    }
+    document.getElementById("game").innerHTML = BlackCat.getBlackCat();
+    setTimeout(start, 50)
+}
+start();
+</script>
+</html>

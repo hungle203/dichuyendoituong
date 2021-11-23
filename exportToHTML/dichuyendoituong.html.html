@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>dichuyendoituong.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e0957b;}
+.s1 { color: #c9c9d1;}
+.s2 { color: #ffffff;}
+.s3 { color: #62a362;}
+.s4 { color: #e0957b; font-weight: bold;}
+.s5 { color: #4dacf0;}
+</style>
+</head>
+<body bgcolor="#1d1d26">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+dichuyendoituong.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;game&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;img  </span><span class="s2">src</span><span class="s3">=&quot;https://dthezntil550i.cloudfront.net/86/latest/861911302007288750002221253/1280_960/6d5f31fb-62f2-4c12-bbda-e22d08b4ea2a.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;&quot; </span><span class="s0">&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;script&gt;</span>
+<span class="s0">class </span><span class="s1">blackCat {</span>
+    <span class="s1">image</span>
+    <span class="s1">top</span>
+    <span class="s1">left</span>
+    <span class="s1">size</span>
+    <span class="s1">speed</span>
+    <span class="s1">constructor(image</span><span class="s4">, </span><span class="s1">top</span><span class="s4">, </span><span class="s1">left</span><span class="s4">, </span><span class="s1">size</span><span class="s4">, </span><span class="s1">speed) {</span>
+        <span class="s0">this</span><span class="s1">.image = image</span>
+        <span class="s0">this</span><span class="s1">.top = top</span>
+        <span class="s0">this</span><span class="s1">.left = left</span>
+        <span class="s0">this</span><span class="s1">.size = size</span>
+        <span class="s0">this</span><span class="s1">.speed = speed</span>
+
+    <span class="s1">}</span>
+    <span class="s1">getBlackCat() {</span>
+        <span class="s0">return </span><span class="s3">'&lt;img width=&quot;' </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.size + </span><span class="s3">'&quot;' </span><span class="s1">+</span>
+            <span class="s3">' height=&quot;' </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.size + </span><span class="s3">'&quot;' </span><span class="s1">+</span>
+            <span class="s3">' src=&quot;' </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.image + </span><span class="s3">'&quot;' </span><span class="s1">+</span>
+            <span class="s3">' style=&quot;top: ' </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.top + </span><span class="s3">'px; left:' </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.left + </span><span class="s3">'px;position:absolute;&quot; /&gt;'</span><span class="s4">;</span>
+    <span class="s1">}</span>
+    <span class="s1">getMoveRight() {</span>
+        <span class="s0">return this</span><span class="s1">.left += </span><span class="s0">this</span><span class="s1">.speed</span>
+    <span class="s1">}</span>
+    <span class="s1">getMoveDow() {</span>
+        <span class="s0">return this</span><span class="s1">.top += </span><span class="s0">this</span><span class="s1">.speed</span>
+    <span class="s1">}</span>
+    <span class="s1">getMoveLeft() {</span>
+        <span class="s0">return this</span><span class="s1">.left -= </span><span class="s0">this</span><span class="s1">.speed</span>
+    <span class="s1">}</span>
+    <span class="s1">getMoveUp() {</span>
+        <span class="s0">return this</span><span class="s1">.top -= </span><span class="s0">this</span><span class="s1">.speed</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">let </span><span class="s1">speed1 = +prompt(</span><span class="s3">&quot;Nhập tốc độ&quot;</span><span class="s1">)</span>
+<span class="s0">let </span><span class="s1">BlackCat = </span><span class="s0">new  </span><span class="s1">blackCat(</span><span class="s3">&quot;https://dthezntil550i.cloudfront.net/86/latest/861911302007288750002221253/1280_960/6d5f31fb-62f2-4c12-bbda-e22d08b4ea2a.png&quot;</span><span class="s4">,</span><span class="s5">0</span><span class="s4">, </span><span class="s5">0</span><span class="s4">,</span><span class="s5">100</span><span class="s4">,</span><span class="s1">speed1 )</span><span class="s4">;</span>
+<span class="s0">function </span><span class="s1">start() {</span>
+    <span class="s0">if </span><span class="s1">(BlackCat.left &lt; (window.innerWidth) - BlackCat.size &amp;&amp; BlackCat.top === </span><span class="s5">0</span><span class="s1">) {</span>
+        <span class="s1">BlackCat.getMoveRight()</span><span class="s4">;</span>
+    <span class="s1">}</span><span class="s0">else if</span><span class="s1">(BlackCat.top &lt; (Window.innerHeight )- BlackCat.size &amp;&amp; BlackCat.left &gt; </span><span class="s5">0 </span><span class="s1">) {</span>
+        <span class="s1">BlackCat.getMoveDow()</span>
+    <span class="s1">}</span><span class="s0">else if</span><span class="s1">(BlackCat.left &gt; </span><span class="s5">0</span><span class="s1">) {</span>
+        <span class="s1">BlackCat.getMoveLeft()</span>
+    <span class="s1">}</span><span class="s0">else if</span><span class="s1">(BlackCat.top &gt; </span><span class="s5">0</span><span class="s1">) {</span>
+        <span class="s1">BlackCat.getMoveUp()</span>
+    <span class="s1">}</span>
+    <span class="s1">document.getElementById(</span><span class="s3">&quot;game&quot;</span><span class="s1">).innerHTML = BlackCat.getBlackCat()</span><span class="s4">;</span>
+    <span class="s1">setTimeout(start</span><span class="s4">, </span><span class="s5">50</span><span class="s1">)</span>
+<span class="s1">}</span>
+<span class="s1">start()</span><span class="s4">;</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
